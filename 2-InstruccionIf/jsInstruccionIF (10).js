@@ -7,8 +7,8 @@ function mostrar()
 "Vamos, la proxima se puede" para notas menores a 4*/
 
 	var nota;
-
-	nota = Math.floor(Math.random() * (12 - 1)) + 0;
+	// Quiero obtener 10 de max (11 - 0) no icluido. + minimo
+	nota = Math.floor(Math.random() * (11 - 0)) + 0;
 	alert(nota);
 	nota = parseInt(nota);
 
