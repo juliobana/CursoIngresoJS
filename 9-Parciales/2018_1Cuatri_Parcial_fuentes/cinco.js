@@ -10,21 +10,21 @@ Aclaración: los planetas se ingresan en minúscula (Mercurio y Venus están ant
     var planeta;
 
     planeta = prompt("Ingrese un planeta: Tierra , Mercurio o Venus");
-
+    var txt;
     switch (planeta) {
         case "tierra":
-            alert("acá vivimos");
-        break;
+            txt = "acá vivimos"
+            break;
         case "mercurio":
-            alert("acá hace más calor"); 
-        break;
+            txt = "acá hace más calor"
+            break;
         case "venus":
-            alert("acá hace más frio");
-        break;
+             txt ="acá hace más frio";
+             break;
     
         default:
-            alert("No es un planeta");
+             txt = "No es un planeta";
             break;
-    }
+    }alert(txt);
 
 }
