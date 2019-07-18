@@ -18,6 +18,7 @@ function CalcularPrecio ()
     var cantidad;
     var descuento;
 
+ 
     cantidad = document.getElementById("Cantidad").value;
 
     cantidad = parseInt(cantidad);
@@ -26,28 +27,39 @@ function CalcularPrecio ()
 
     precioXcantidad = cantidad * precioUnitario;
     
-    if (cantidad>6){
-
-        
-        descuento = precioXcantidad * 50 / 100;
-
-        
-
-    }else{
-        
-        if(cantidad==5){
-
-            if(marca == "ArgentinaLuz" ){
-
-                descuento = precioXcantidad * 40 / 100;
-            }else{
-
-                descuento = precioXcantidad * 30 / 100;
-            }
+    switch (cantidad) {
+        case 5:
+        switch (marca) {
+            case "ArgentinaLuz":
+            descuento = precioXcantidad * 40 / 100;
+                break;
+            default:
+            descuento = precioXcantidad * 30 / 100;
+                break;
         }
+        
+        case 4:
+        switch (marca) {
+            case "ArgentinaLuz":
+            case "FelipeLamparas":
+            descuento = precioXcantidad * 25 / 100;
+                break;
+
+        default:
+        descuento = precioXcantidad * 20 / 100;
+            
+        break;    
+            
+    
+        default:
+            break;
+    }
+
     }
 
     precioFinal = precioXcantidad - descuento;
 
     alert(precioFinal);
+
 }
+
